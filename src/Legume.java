@@ -1,9 +1,12 @@
 public class Legume extends Nourriture {
 
-  public void Legume() {
-  }
+	 /**constructeur par défaut : 
+	  *  crée un légume unitaire de valeur énergétique prédéfinie
+	  */  
+public Legume() {
+	this.quantite=1 ;
+	this.energie=2;
+}
 
-  public void afficher() {
-  }
 
 }
