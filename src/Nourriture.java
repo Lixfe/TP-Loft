@@ -2,11 +2,14 @@
  */
 abstract class Nourriture {
 
-  public Integer Quantité;
+//ATTRIBUTS	
+	
+  public int quantite;
 
-  public int Energie;
+  public int energie;
 
-  public void afficher() {
-  }
+  
+//METHODES  
+
 
 }
