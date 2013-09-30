@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class Neuneu {
+public abstract class Neuneu implements Mangeable {
 
   protected int positionx;
   protected int positiony;
@@ -11,7 +11,17 @@ public abstract class Neuneu {
 
   public abstract void sedeplacer(int x, int y);
   public abstract void manger(Mangeable nourriture);
-  public abstract LinkedList<Neuneu> sereproduire(LinkedList<Neuneu> partenaires);
+  public abstract Neuneu sereproduire(Neuneu partenaire);
   public abstract void dormir();
+  
+  public void etremange(){
+	  this.energie = 0;
+			  for (Neuneu neu : this.maison.Population) {
+				
+				
+			}
+				
+			}
+  }
 
 }

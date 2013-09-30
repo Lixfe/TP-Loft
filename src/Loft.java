@@ -1,8 +1,10 @@
+import java.util.*;
+
 public class Loft {
 
   protected LinkedList<Neuneu> Population;
 
-  protected Case Plateau;
+  protected Cases Plateau;
 
   public void Loft() {
   }
@@ -10,7 +12,7 @@ public class Loft {
   public void afficher() {
   }
 
-  public void naissance( Neuneu) {
+  public void naissance( Neuneu ) {
   }
 
 }
