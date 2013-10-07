@@ -50,6 +50,8 @@ public class Erratique extends Neuneu {
 		  b = (int)(Math.random()*2 - 1);
 	  } while (this.positiony + b < this.maison.Plateau.length && this.positiony + b >= 0);
 	  
+	  System.out.println("a et b trouvés :"+a+" "+ b));
+	  
 	  this.positionx = this.positionx+a;
 	  this.positiony = this.positiony+b;
 	  
