@@ -31,7 +31,16 @@ public class Loft {
 		System.out.println(n.nom+" est à la position "+n.positionx+" , "+n.positiony);
 	  }
 	  
-	  //Affichage de la nourriture
+	  //Affichage de la nourriture (pour laquelle la quantite est 1) en parcourant le tableau des cases, puis la liste des nourritures sur chacune de ces cases
+	  for (int i = 0; i < this.Plateau.length; i++) {
+		  for (int j = 0; j < this.Plateau[0]; j++) {
+			  for (bouffe : this.Plateau[i][j].reserve){}
+			  
+			  System.out.println("nourriture sur la case "+i+" , "+j+" : ");
+			
+		}
+		
+	}
 	  
   }  
 
