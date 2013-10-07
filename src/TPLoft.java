@@ -39,7 +39,7 @@ public class TPLoft {
 				//tour de jeu d'un neuneu
 				joueur.sedeplacer();
 				joueur.manger();
-				joueur.sereproduire();
+				// joueur.sereproduire(); //ligne commentee car pas encore implemente
 			}
 			
 			//suppression des neuneus qui n'ont plus d'énergie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
