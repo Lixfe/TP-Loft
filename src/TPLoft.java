@@ -35,6 +35,8 @@ public class TPLoft {
 			}
 		}	
 		
+		//ETAPE6 affichage du loft à la fin du jeu
+		loft.afficher();
 		
 	}
 }
