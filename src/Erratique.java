@@ -1,4 +1,5 @@
 import java.math.*;
+import java.util.*;
 
 public class Erratique extends Neuneu {
 
@@ -74,7 +75,13 @@ public class Erratique extends Neuneu {
  */
 	  if (this.maison.Plateau[this.positiony][this.positionx].reserve.size()>=1 )
 	  {
+<<<<<<< HEAD
 		this.energie = this.energie+this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst().energie;
+=======
+		this.energie = this.maison.Plateau[this.positiony][this.positionx].reserve.getFirst().energie;
+		System.out.println("Le neuneu "+this.nom+" a mange la nourriture "+this.maison.Plateau[this.positiony][this.positionx].reserve.getFirst().getClass()+" et a gagne de l'energie.");
+		this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst();
+>>>>>>> 70c4403ff118dd614182739468ac98758cbc8f84
 	  }
   }
 
@@ -90,8 +97,10 @@ public class Erratique extends Neuneu {
 		  {
 			  Neuneu fils = new Erratique(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
 			  this.maison.Population.addLast(fils);
+			  System.out.println("Le neuneu "+this.nom+" et le neuneu "+neu.nom+" se sont reproduits. Il en resulte la naissance du neuneu "+fils.nom);
 			  break;
 		  }
+
 	  }
   }
   
