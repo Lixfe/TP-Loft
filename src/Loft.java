@@ -4,7 +4,7 @@ import java.util.*;
 public class Loft {
 
   protected LinkedList<Neuneu> Population;
-  protected Plateau Cases[][] ; //matrice de cases contenant chacune de la nourriture
+  protected  Cases[][] Plateau; //matrice de cases contenant chacune de la nourriture
 
   /**Constructeur du Loft par défaut
    * Crée un Loft de 10*10 cases
@@ -17,7 +17,7 @@ public class Loft {
 	  this.Plateau = new Cases[10][10] ;
 	  for (int i = 0; i < 10; i++) {
 		  for (int j = 0; j < 10; j++) {
-			  this.Plateau[i][j]=Cases();
+			  this.Plateau[i][j]=new Cases();
 			
 		}
 		
