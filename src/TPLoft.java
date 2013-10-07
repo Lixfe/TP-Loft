@@ -1,6 +1,9 @@
 
 public class TPLoft {
 
+	/**Main : met en jeu un scénario simple, avec un individu et quelques en-cas
+	 * 
+	 */
 	public static void main(String[] args) {
 		// SCENARIO DE TEST POUR LE LOFT
 		
