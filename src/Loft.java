@@ -49,8 +49,8 @@ public class Loft {
   /**Méthode Naissance
    * Ajoute un nouveau Neuneu à la population du Loft
    */
-  public void naissance( Neuneu bébé ) {
-	  this.Population.add(0, bébé);	  
+  public void naissance( Neuneu bebe ) {
+	  this.Population.add(0, bebe);	  
   }
 
 }	
