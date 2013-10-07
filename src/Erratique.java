@@ -4,7 +4,7 @@ public class Erratique extends Neuneu {
 
 	/**
 	 * Constructeur du Neuneu Erratique : 
-	 * Sa position de d�part est � l'origine, il a 20 d'energie.
+	 * Sa position de depart est a l'origine, il a 20 d'energie.
 	 * 
 	 * Ce constructeur contient l'argument Loft pour donner un lien au Loft.
 	 */
@@ -45,8 +45,20 @@ public class Erratique extends Neuneu {
 	  System.out.println("Sa nouvelle position est : x="+this.positionx+" ; y="+this.positiony);
   }
 
-  public void manger(Mangeable bouffe){
-	  
+  /**
+   * Methode manger : si de la nourriture est presente sur la case, il la mange.
+   * Manger une nourriture augmente l'energie du neuneu de l'energie contenue dans la nourriture.
+   * La nourriture est ensuite enlevee de la case
+   */
+  public void manger(){
+/*
+ * On regarde si de la nourriture est presente sur la case sur laquelle le neuneu est situe.
+ * Si une nourriture est presente, on l'enleve de la liste -> la methode etremange n'est pas utile dans ce cas.
+ */
+	  if (this.maison.Plateau[this.positiony][this.positionx].reserve.size()>=1 )
+	  {
+		this.energie = this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst().energie;
+	  }
   }
 
   public Neuneu sereproduire(Neuneu partenaire){
@@ -57,5 +69,11 @@ public class Erratique extends Neuneu {
 	  
   }
   
- 
+ /**
+  * Lorsque le neuneu se fait manger par un cannibale, son energie est reduite a 0.
+  */
+  public void etremange(){
+	  this.energie = 0;
+  }
+  
 }
