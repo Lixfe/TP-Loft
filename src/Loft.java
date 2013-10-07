@@ -33,7 +33,7 @@ public class Loft {
 	  
 	  //Affichage de la nourriture (pour laquelle la quantite est 1) en parcourant le tableau des cases, puis la liste des nourritures sur chacune de ces cases
 	  for (int i = 0; i < this.Plateau.length; i++) {
-		  for (int j = 0; j < this.Plateau[0]; j++) {
+		  for (int j = 0; j < this.Plateau[0].length; j++) {
 			  for (Nourriture bouffe : this.Plateau[i][j].reserve){
 				  if (bouffe.quantite>0){
 				  	System.out.println("nourriture sur la case "+i+" , "+j+" : "+ bouffe.getClass());
