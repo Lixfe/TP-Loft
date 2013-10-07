@@ -17,8 +17,8 @@ public class TPLoft {
 		Legume patate=new Legume();
 		Pizza margherita = new Pizza();
 		
-		loft.Plateau[1][6].reserve.add(margherita);
-		loft.Plateau[5][9].reserve.add(poireau);
+		loft.Plateau[1][4].reserve.add(margherita);
+		loft.Plateau[3][2].reserve.add(poireau);
 		loft.Plateau[8][2].reserve.add(patate);
 		
 		//ETAPE3 ajout d'un Neuneu
