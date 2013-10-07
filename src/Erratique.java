@@ -59,7 +59,7 @@ public class Erratique extends Neuneu {
 	  /* A chaque deplacement on faire perdre 1 point d'energie*/
 	  this.energie = this.energie - 1;
 	  
-	  System.out.println("Le neuneu "+this.nom+" s'est deplace.");
+	  System.out.println("Le neuneu "+this.nom+" s'est deplace. Nouvelle énergie : "+this.energie);
 	  System.out.println("Sa nouvelle position est : x="+this.positionx+" ; y="+this.positiony);
   }
 
