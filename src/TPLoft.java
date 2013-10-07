@@ -27,13 +27,12 @@ public class TPLoft {
 		
 		//ETAPE4 affichage du loft
 		loft.afficher();
-		
-		//ETAPE 4 BIS TEST : deplacer luc
-		luc.sedeplacer();
+
 		
 		//ETAPE5 faire jouer les joueurs : tant qu'il y a des joueurs, ils font chacun leur tour l'enchainement se déplacer - manger - se reproduire
 		
 		System.out.println("début du jeu");
+		
 		while (loft.Population.isEmpty()==false) {
 			
 			for (Neuneu joueur : loft.Population){
