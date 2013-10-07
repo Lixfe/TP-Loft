@@ -18,6 +18,21 @@ public class Erratique extends Neuneu {
   }
   
   /**
+   * Constructeur Erratique avec position donnee : on cree un nouveau neuneu erratique ayant une position donnee
+   * @param n : Nom du neuneu
+   * @param L : Loft dans lequel il se trouve
+   * @param x : abscisse du neuneu
+   * @param y : ordonnee du neuneu
+   */
+  public Erratique(String n, Loft L, int x, int y) {
+	  this.nom = n ;
+	  this.positionx = x;
+	  this.positiony = y;
+	  this.energie=20 ;
+	  this.maison = L;
+  }
+  
+  /**
    * Methode pour le deplacement du neuneu erratique.
    * 
    * Ce neuneu ne possède pas de stratégie de déplacement, il va de manière aléatoire dans une case adjacente.
@@ -61,8 +76,21 @@ public class Erratique extends Neuneu {
 	  }
   }
 
-  public Neuneu sereproduire(Neuneu partenaire){
-	  
+  /**
+   * Methode sereproduire() : Le neuneu identifie si un autre neuneu est present sur la meme case que lui.
+   * Si oui, il se reproduit avec ce neuneu et cree un neuneu fils.
+   * Le type du neuneu est indifferent pour la reproduction
+   */
+  public void sereproduire(){
+	  for (Neuneu neu : this.maison.Population)
+	  {
+		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu)
+		  {
+			  Neuneu fils = new Erratique(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
+			  this.maison.Population.addLast(fils);
+			  break;
+		  }
+	  }
   }
   
   public void dormir(){
