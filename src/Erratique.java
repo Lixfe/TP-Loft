@@ -80,7 +80,7 @@ public class Erratique extends Neuneu {
 		this.energie = this.energie+amanger.energie;
 		
 		System.out.println("Le neuneu "+this.nom+" a mange la nourriture "+amanger.getClass()+" et a gagne de l'energie.");
-		this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst();
+		
 	  }
   }
 
