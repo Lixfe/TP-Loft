@@ -9,7 +9,7 @@ public abstract class Neuneu implements Mangeable {
   protected int alcoolemie;
   protected Loft maison;
 
-  public abstract void sedeplacer(int x, int y);
+  public abstract void sedeplacer();
   public abstract void manger(Mangeable nourriture);
   public abstract Neuneu sereproduire(Neuneu partenaire);
   public abstract void dormir();
