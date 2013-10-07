@@ -1,5 +1,6 @@
 import java.util.*;
 
+//CONSTRUCTEURS
 public class Loft {
 
   protected LinkedList<Neuneu> Population;
@@ -25,7 +26,12 @@ public class Loft {
 
   public void afficher() {}  
 
-  public void naissance( Neuneu ) {
+  
+  /**Méthode Naissance
+   * Ajoute un nouveau Neuneu à la population du Loft
+   */
+  public void naissance( Neuneu bébé ) {
+	  this.Population.add(0, bébé);	  
   }
 
-}
+}	
