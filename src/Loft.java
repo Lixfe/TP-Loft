@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 //CONSTRUCTEURS
 public class Loft {
 
@@ -24,7 +25,15 @@ public class Loft {
 	}
   }
 
-  public void afficher() {}  
+  public void afficher() {
+	  //Affichage des Neuneus
+	  for (Neuneu n : this.Population) {
+		System.out.println(n.nom+" est à la position "+n.positionx+" , "+n.positiony);
+	  }
+	  
+	  //Affichage de la nourriture
+	  
+  }  
 
   
   /**Méthode Naissance
