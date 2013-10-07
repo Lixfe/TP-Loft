@@ -9,8 +9,7 @@ public class Erratique extends Neuneu {
 	 * 
 	 * Ce constructeur contient l'argument Loft pour donner un lien au Loft.
 	 */
- 
-  public Erratique(String n, Loft L) {
+   public Erratique(String n, Loft L) {
 	  this.nom = n ;
 	  this.positionx = 0;
 	  this.positiony = 0;
