@@ -32,10 +32,21 @@ public class TPLoft {
 		while (loft.Population.isEmpty()==false) {
 			
 			for (Neuneu joueur : loft.Population){
+				//tour de jeu d'un neuneu
 				joueur.sedeplacer();
 				joueur.manger();
 				joueur.sereproduire();
 			}
+			
+			//suppression des neuneus qui n'ont plus d'énergie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
+			for (int i=0 ; i<loft.Population.size() ; i++){
+				Neuneu joueuri = loft.Population.get(i); //joueur est le joueur d'index i dans la liste
+				if (joueuri.energie<=0) {				
+					loft.Population.remove(i);
+					System.out.println(joueuri.nom+" est mort !");
+				}
+			}
+			
 		}	
 		
 		//ETAPE6 affichage du loft à la fin du jeu
