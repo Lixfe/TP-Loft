@@ -81,12 +81,16 @@ public class Erratique extends Neuneu {
    * Si oui, il se reproduit avec ce neuneu et cree un neuneu fils.
    * Le type du neuneu est indifferent pour la reproduction
    */
-  public Neuneu sereproduire(){
+  public void sereproduire(){
 	  for (Neuneu neu : this.maison.Population)
+	  {
 		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu)
 		  {
-			  Neuneu fils = new Erratique
+			  Neuneu fils = new Erratique(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
+			  this.maison.Population.addLast(fils);
+			  break;
 		  }
+	  }
   }
   
   public void dormir(){
