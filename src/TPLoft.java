@@ -7,6 +7,8 @@ public class TPLoft {
 	public static void main(String[] args) {
 		// SCENARIO DE TEST POUR LE LOFT
 		
+		System.out.flush();
+		
 		//ETAPE1 création du Loft
 		Loft loft = new Loft() ;
 		
