@@ -18,6 +18,7 @@ public class TPLoft {
 		
 		//ETAPE3 ajout d'un Neuneu
 		Erratique luc = new Erratique("Luc", loft);
+		loft.naissance(luc);
 		
 		//ETAPE4 affichage du loft
 		loft.afficher();
