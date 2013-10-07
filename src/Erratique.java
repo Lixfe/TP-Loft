@@ -44,8 +44,8 @@ public class Erratique extends Neuneu {
 	  
 	  do
 	  {
-		  a = (int)(Math.round(Math.random()*2.)) - 1;	  
-		  b = (int)(Math.round(Math.random()*2.)) - 1;
+		  a = (int)((Math.random()*3.)) - 1;	  
+		  b = (int)((Math.random()*3.)) - 1;
 		  /*Nombres aleatoires entre -1 et 1*/
 
 	
