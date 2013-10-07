@@ -1,8 +1,11 @@
 public class Erratique extends Neuneu {
 
-  public void Erratique() {
-	  this.nom = "erratique"
-			  this.positionx = 
+  public void Erratique(n String, L Loft) {
+	  this.nom = n ;
+	  this.positionx = 0 ;
+	  this.positiony = 0 ;
+	  this.Loft = L;
+	  
   }
   
   public void sedeplacer(int x, int y){

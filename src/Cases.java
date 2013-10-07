@@ -1,16 +1,21 @@
-import java.util.Vector;
+import java.util.LinkedList;
+
 
 public class Cases {
 
+	//ATTRIBUT
   public LinkedList<Nourriture> reserve;
 
-    public Vector  myCases;
-    public Vector  myCases;
 
-  public void Case() {
+
+  public Cases() {
+	  this.reserve=new LinkedList<Nourriture>() ;
   }
+  
+  
 
   public void supprimeliste() {
+	  
   }
 
 }
