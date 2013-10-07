@@ -61,7 +61,12 @@ public class Erratique extends Neuneu {
 	  }
   }
 
-  public Neuneu sereproduire(Neuneu partenaire){
+  /**
+   * Methode sereproduire() : Le neuneu identifie si un autre neuneu est present sur la meme case que lui.
+   * Si oui, il se reproduit avec ce neuneu et cree un neuneu fils.
+   * Le type du neuneu est indifferent pour la reproduction
+   */
+  public Neuneu sereproduire(){
 	  
   }
   
