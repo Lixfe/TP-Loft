@@ -48,8 +48,7 @@ public class Erratique extends Neuneu {
 	  {
 		  /*Nombre aleatoire entre -1 et 1*/
 
-		
-		  System.out.println("dans le tableau en x ?"+tempx);
+	
 		  
 	  } while ((this.positionx + a >= this.maison.Plateau[0].length) && (this.positionx + a < 0));
 	  do
