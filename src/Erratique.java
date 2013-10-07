@@ -41,20 +41,14 @@ public class Erratique extends Neuneu {
   public void sedeplacer(){
 	  int a,b;
 	  
-	  
-	  
-	  
 	  do
 	  {
-		  /*Nombre aleatoire entre -1 et 1*/
+		  a = (int)(Math.round(Math.random()*2.)) - 1;	  
+		  b = (int)(Math.round(Math.random()*2.)) - 1;
+		  /*Nombres aleatoires entre -1 et 1*/
 
 	
-		  
-	  } while ((this.positionx + a >= this.maison.Plateau[0].length) && (this.positionx + a < 0));
-	  do
-	  {
-		  b = (int)(Math.random()*2) - 1;
-	  } while (this.positiony + b >= this.maison.Plateau.length && this.positiony + b < 0);
+	  } while (((this.positionx + a >= this.maison.Plateau[0].length) || (this.positionx + a < 0)) || (this.positiony + b >= this.maison.Plateau.length || this.positiony + b < 0) ||(a==0 && b==0));
 
 	  System.out.println();
 	  
@@ -80,7 +74,7 @@ public class Erratique extends Neuneu {
  */
 	  if (this.maison.Plateau[this.positiony][this.positionx].reserve.size()>=1 )
 	  {
-		this.energie = this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst().energie;
+		this.energie = this.energie+this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst().energie;
 	  }
   }
 
