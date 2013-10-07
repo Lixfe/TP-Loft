@@ -41,17 +41,23 @@ public class Erratique extends Neuneu {
   public void sedeplacer(){
 	  int a,b;
 	  
+	  
+	  
+	  
 	  do
 	  {
 		  /*Nombre aleatoire entre -1 et 1*/
-		  a = (int)(Math.random()*2)-1;
-	  
-	  } while (this.positionx + a < this.maison.Plateau[0].length && this.positionx + a >= 0);
+
+		
+		  System.out.println("dans le tableau en x ?"+tempx);
+		  
+	  } while ((this.positionx + a >= this.maison.Plateau[0].length) && (this.positionx + a < 0));
 	  do
 	  {
 		  b = (int)(Math.random()*2) - 1;
-	  } while (this.positiony + b < this.maison.Plateau.length && this.positiony + b >= 0);
+	  } while (this.positiony + b >= this.maison.Plateau.length && this.positiony + b < 0);
 
+	  System.out.println();
 	  
 	  this.positionx = this.positionx+a;
 	  this.positiony = this.positiony+b;
