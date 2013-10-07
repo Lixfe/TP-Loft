@@ -4,9 +4,17 @@ public class Loft {
 
   protected LinkedList<Neuneu> Population;
 
-  protected Cases Plateau;
+  protected Plateau Cases ;
 
-  public void Loft() {
+  /**Constructeur du Loft par défaut
+   * Crée un Loft de 10*10 cases
+   * Il n'y a pas d'habitant
+   * il n'y a pas de nourriture
+   * 
+   */
+  public Loft() {
+	  this.Population = new LinkedList<Neuneu>();
+	  this.Plateau = new Cases ;
   }
 
   public void afficher() {
