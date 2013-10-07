@@ -1,4 +1,4 @@
-import java.util.*;
+import java.math.*;
 
 public class Erratique extends Neuneu {
 
@@ -28,11 +28,11 @@ public class Erratique extends Neuneu {
 	  do
 	  {
 		  /*Nombre aleatoire entre -1 et 1*/
-		  a = Random.nextInt(3)-1;
+		  a = (int)(Math.random()*2 - 1);
 	  } while (this.positionx + a < this.maison.Plateau[0].length && this.positionx + a >= 0);
 	  do
 	  {
-		  b = Random.nextInt(3)-1;
+		  b = (int)(Math.random()*2 - 1);
 	  } while (this.positiony + b < this.maison.Plateau.length && this.positiony + b >= 0);
 	  
 	  this.positionx = this.positionx+a;
