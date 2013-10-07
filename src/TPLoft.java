@@ -42,8 +42,9 @@ public class TPLoft {
 			for (int i=0 ; i<loft.Population.size() ; i++){
 				Neuneu joueuri = loft.Population.get(i); //joueur est le joueur d'index i dans la liste
 				if (joueuri.energie<=0) {				
+					System.out.println(joueuri.nom+" est mort !");	
 					loft.Population.remove(i);
-					System.out.println(joueuri.nom+" est mort !");
+
 				}
 			}
 			
