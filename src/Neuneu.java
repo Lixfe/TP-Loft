@@ -17,11 +17,11 @@ public abstract class Neuneu implements Mangeable {
   public void etremange(){
 	  this.energie = 0;
 			  for (Neuneu neu : this.maison.Population) {
-				
-				
+				if (neu.energie == 0) {
+					this.maison.Population.remove(neu);
+				}
 			}
 				
-			}
-  }
+		}
+ }
 
-}
