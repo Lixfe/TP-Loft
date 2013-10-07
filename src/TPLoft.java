@@ -1,7 +1,7 @@
 
 public class TPLoft {
 
-	/**Main : met en jeu un scénario simple, avec un individu et quelques en-cas
+	/**Main : met en jeu un scenario simple, avec un individu et quelques en-cas
 	 * 
 	 */
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class TPLoft {
 		
 		System.out.flush();
 		
-		//ETAPE1 création du Loft
+		//ETAPE1 creation du Loft
 		Loft loft = new Loft() ;
 		
 		//ETAPE2 ajout de nourriture
@@ -29,9 +29,9 @@ public class TPLoft {
 		loft.afficher();
 
 		
-		//ETAPE5 faire jouer les joueurs : tant qu'il y a des joueurs, ils font chacun leur tour l'enchainement se déplacer - manger - se reproduire
+		//ETAPE5 faire jouer les joueurs : tant qu'il y a des joueurs, ils font chacun leur tour l'enchainement se dï¿½placer - manger - se reproduire
 		
-		System.out.println("début du jeu");
+		System.out.println("debut du jeu");
 		
 		while (loft.Population.isEmpty()==false) {
 			
@@ -42,7 +42,7 @@ public class TPLoft {
 				// joueur.sereproduire(); //ligne commentee car pas encore implemente
 			}
 			
-			//suppression des neuneus qui n'ont plus d'énergie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
+			//suppression des neuneus qui n'ont plus d'ï¿½nergie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
 			for (int i=0 ; i<loft.Population.size() ; i++){
 				Neuneu joueuri = loft.Population.get(i); //joueur est le joueur d'index i dans la liste
 				if (joueuri.energie<=0) {				
@@ -54,7 +54,7 @@ public class TPLoft {
 			
 		}	
 		
-		//ETAPE6 affichage du loft à la fin du jeu
+		//ETAPE6 affichage du loft ï¿½ la fin du jeu
 		loft.afficher();
 		
 	}
