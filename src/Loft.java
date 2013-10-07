@@ -35,8 +35,9 @@ public class Loft {
 	  for (int i = 0; i < this.Plateau.length; i++) {
 		  for (int j = 0; j < this.Plateau[0]; j++) {
 			  for (Nourriture bouffe : this.Plateau[i][j].reserve){
-				  if ()
-			  	System.out.println("nourriture sur la case "+i+" , "+j+" : "+ bouffe.);
+				  if (bouffe.quantite>0){
+				  	System.out.println("nourriture sur la case "+i+" , "+j+" : "+ bouffe.getClass());
+				  }
 			  }
 		}
 		
