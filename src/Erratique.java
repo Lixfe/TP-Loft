@@ -39,18 +39,23 @@ public class Erratique extends Neuneu {
    * (Les dÃ©placements diagonaux sont autorisÃ©s)
    */
   public void sedeplacer(){
+	  System.out.println("début du déplacement de "+this.nom);
 	  int a,b;
+	  
 	  do
 	  {
 		  /*Nombre aleatoire entre -1 et 1*/
 		  a = (int)(Math.random()*2 - 1);
+		  
+System.out.println("a :"+a);		  
+		  
 	  } while (this.positionx + a < this.maison.Plateau[0].length && this.positionx + a >= 0);
 	  do
 	  {
 		  b = (int)(Math.random()*2 - 1);
 	  } while (this.positiony + b < this.maison.Plateau.length && this.positiony + b >= 0);
 	  
-	  System.out.println("a et b trouvés :"+a+" "+ b));
+	  System.out.println("a et b trouvés :"+a+" "+ b);
 	  
 	  this.positionx = this.positionx+a;
 	  this.positiony = this.positiony+b;
