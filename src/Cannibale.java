@@ -126,8 +126,9 @@ public class Cannibale extends Neuneu {
 	  {
 		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu && neu.getClass().getName() == "Cannibale")
 		  {
-			  //On cree un fils de type Cannibale 
-			  Neuneu fils = new Cannibale(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
+			  System.out.println(neu.getClass().getName());
+			  //On cree un fils de type Erratique pour ne pas multiplier la population 
+			  Neuneu fils = new Erratique(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
 			  System.out.println("Le neuneu "+this.nom+" et le neuneu "+neu.nom+" se sont reproduits. Il en resulte la naissance du neuneu "+fils.nom+", de type Cannibale");
 			  listeFils.add(fils);
 			  break;
