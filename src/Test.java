@@ -39,20 +39,29 @@ System.out.flush();
 		
 		while (loft.Population.isEmpty()==false) {
 			
+			// On cree une liste contenant les neuneus qui se sont nes pendant un tour, et qui apparaitront a la fin du tour sur le plateau
+			LinkedList<Neuneu> listeNaissance = new LinkedList<Neuneu>();
+			
 			//utilisation listiterator pour pouvoir ajouter les neuneus qui naissent au fur et a mesure
 			ListIterator<Neuneu> litr = loft.Population.listIterator();
 			
 			while (litr.hasNext()) 
 			{
 				Neuneu joueur = litr.next();
+				
+
+				
 				// tour de jeu d'un neuneu
 				joueur.sedeplacer();
 				joueur.manger();
-				joueur.sereproduire(); 
+				listeNaissance.addAll(joueur.sereproduire()); 
 			}
+			
+			//On ajoute les neuneus nee pendant le tour sur le plateau
+			loft.Population.addAll(listeNaissance);
 				
 			
-			//suppression des neuneus qui n'ont plus d'�nergie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
+			//suppression des neuneus qui n'ont plus d'energie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
 			for (int i=0 ; i<loft.Population.size() ; i++){
 				Neuneu joueuri = loft.Population.get(i); //joueur est le joueur d'index i dans la liste
 				if (joueuri.energie<=0) {				

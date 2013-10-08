@@ -11,7 +11,7 @@ public abstract class Neuneu implements Mangeable {
 
   public abstract void sedeplacer();
   public abstract void manger();
-  public abstract Neuneu sereproduire();
+  public abstract LinkedList<Neuneu> sereproduire();
   public abstract void dormir();
   
   public void etremange(){
