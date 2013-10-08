@@ -132,7 +132,17 @@ public class Lapin extends Neuneu {
 
 	  }
   }
-  
-  
+	  
+ public void dormir() {
+		  
+	  }
+
+ /**
+  * Lorsque le neuneu se fait manger par un cannibale, son energie est reduite a 0.
+  */
+  public void etremange(){
+	  this.energie = 0;
+    
+  }
   
 }
