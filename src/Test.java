@@ -1,3 +1,5 @@
+import java.util.*;
+
 
 public class Test {
 
@@ -24,6 +26,8 @@ System.out.flush();
 		//ETAPE3 ajout d'un Neuneu
 		Lapin luc = new Lapin("Luc", loft);
 		loft.naissance(luc);
+		Lapin john = new Lapin("John", loft, 5, 4);
+		loft.naissance(john);
 		
 		//ETAPE4 affichage du loft
 		loft.afficher();
@@ -35,12 +39,18 @@ System.out.flush();
 		
 		while (loft.Population.isEmpty()==false) {
 			
-			for (Neuneu joueur : loft.Population){
-				//tour de jeu d'un neuneu
+			//utilisation listiterator pour pouvoir ajouter les neuneus qui naissent au fur et a mesure
+			ListIterator<Neuneu> litr = loft.Population.listIterator();
+			
+			while (litr.hasNext()) 
+			{
+				Neuneu joueur = litr.next();
+				// tour de jeu d'un neuneu
 				joueur.sedeplacer();
 				joueur.manger();
 				joueur.sereproduire(); 
 			}
+				
 			
 			//suppression des neuneus qui n'ont plus d'�nergie : on parcourt la liste et on verifie pour chacun qu'ils ont assez d'energie
 			for (int i=0 ; i<loft.Population.size() ; i++){
