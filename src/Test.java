@@ -24,12 +24,9 @@ System.out.flush();
 		loft.Plateau[8][2].reserve.add(patate);
 		
 		//ETAPE3 ajout d'un Neuneu
-		Lapin luc = new Lapin("Luc", loft);
+		Vorace luc = new Vorace("Luc", loft);
 		loft.naissance(luc);
-		Lapin john = new Lapin("John", loft, 5, 4);
-		loft.naissance(john);
-		Cannibale hannibal = new Cannibale("Hannibal", loft, 10, 10);
-		loft.naissance(hannibal);
+
 		
 		//ETAPE4 affichage du loft
 		loft.afficher();
