@@ -45,8 +45,8 @@ public class Lapin extends Neuneu {
 	  int index;
 	 index = -1;
 	 //correspond a la distance entre un neuneu et le neuneu lapin considere. On prendra comme definition de distance la distance euclidienne au carre
-	 int distance;
-	 distance = 0;
+	 double distance;
+	 distance =  Double.POSITIVE_INFINITY; 
 	 
 	 //on va chercher le neuneu le plus proche, i.e. ayant la distance minimale tout en etant sur une case differente
 	  for (Neuneu neu : this.maison.Population)
@@ -54,7 +54,8 @@ public class Lapin extends Neuneu {
 		  if (distance > (neu.positionx - this.positionx)*(neu.positionx - this.positionx)+(neu.positiony - this.positiony)*(neu.positiony - this.positiony) && neu != this && (neu.positionx - this.positionx)*(neu.positionx - this.positionx)+(neu.positiony - this.positiony)*(neu.positiony - this.positiony)>0)
 		  {
 			  distance = (neu.positionx - this.positionx)*(neu.positionx - this.positionx)+(neu.positiony - this.positiony)*(neu.positiony - this.positiony);
-			  index = this.maison.Population.indexOf(neu);					  
+			  index = this.maison.Population.indexOf(neu);
+			  System.out.println("distance :"+distance+", index :"+index);
 		  }
 	  }
 	 
@@ -77,11 +78,11 @@ public class Lapin extends Neuneu {
 	 {
 		 if (this.maison.Population.get(index).positionx - this.positionx != 0)
 		 {
-			 this.positionx = (this.maison.Population.get(index).positionx - this.positionx)/Math.abs(this.maison.Population.get(index).positionx - this.positionx);
+			 this.positionx = this.positionx + (int) (this.maison.Population.get(index).positionx - this.positionx)/Math.abs(this.maison.Population.get(index).positionx - this.positionx);
 		 }
 		 if (this.maison.Population.get(index).positiony - this.positiony != 0)
 		 {
-			 this.positiony = (this.maison.Population.get(index).positiony - this.positiony)/Math.abs(this.maison.Population.get(index).positiony - this.positiony);
+			 this.positiony = this.positiony + (int) (this.maison.Population.get(index).positiony - this.positiony)/Math.abs(this.maison.Population.get(index).positiony - this.positiony);
 		 }
 	 }
 	 
@@ -119,18 +120,19 @@ public class Lapin extends Neuneu {
    * Si oui, il se reproduit avec ce neuneu et cree un neuneu fils.
    * Le type du neuneu est indifferent pour la reproduction
    */
-  public void sereproduire(){
+  public Neuneu sereproduire(){
 	  for (Neuneu neu : this.maison.Population)
 	  {
 		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu)
 		  {
 			  Neuneu fils = new Lapin(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
-			  this.maison.Population.addLast(fils);
 			  System.out.println("Le neuneu "+this.nom+" et le neuneu "+neu.nom+" se sont reproduits. Il en resulte la naissance du neuneu "+fils.nom+", de type " +fils.getClass().getName());
+			  return fils;
 			  break;
 		  }
 
 	  }
+
   }
 	  
  public void dormir() {
