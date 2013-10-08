@@ -127,7 +127,8 @@ public class Lapin extends Neuneu {
 	  {
 		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu)
 		  {
-			  Neuneu fils = new Lapin(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
+			  //On cree un fils de type Erratique pour ne pas que la population augmente de maniere exponentielle
+			  Neuneu fils = new Erratique(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
 			  System.out.println("Le neuneu "+this.nom+" et le neuneu "+neu.nom+" se sont reproduits. Il en resulte la naissance du neuneu "+fils.nom+", de type " +fils.getClass().getName());
 			  listeFils.add(fils);
 			  break;

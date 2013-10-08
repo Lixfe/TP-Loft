@@ -15,4 +15,24 @@ public class Cannibale extends Neuneu {
 	  this.energie=20 ;
 	  this.maison = L;
   }
+  
+  /**
+   * Constructeur Cannibale avec position donnee : on cree un nouveau neuneu cannibale ayant une position donnee
+   * @param n : Nom du neuneu
+   * @param L : Loft dans lequel il se trouve
+   * @param x : abscisse du neuneu
+   * @param y : ordonnee du neuneu
+   */
+  public Cannibale(String n, Loft L, int x, int y) {
+	  this.nom = n ;
+	  this.positionx = x;
+	  this.positiony = y;
+	  this.energie=20 ;
+	  this.maison = L;
+  }
+  
+  
+  //METHODES
+  
+  
 }
