@@ -24,8 +24,10 @@ System.out.flush();
 		loft.Plateau[8][2].reserve.add(patate);
 		
 		//ETAPE3 ajout d'un Neuneu
-		Vorace luc = new Vorace("Luc", loft);
-		loft.naissance(luc);
+		Erratique neuneuErratique = new Erratique("neuneuErratique", loft);
+		loft.naissance(neuneuErratique);
+		Cannibale neuneuCannibale = new Cannibale("neuneuCannibale", loft, 5, 6);
+		loft.naissance(neuneuCannibale);
 
 		
 		//ETAPE4 affichage du loft

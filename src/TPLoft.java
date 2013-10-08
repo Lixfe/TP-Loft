@@ -25,10 +25,15 @@ public class TPLoft {
 		loft.Plateau[8][2].reserve.add(patate);
 		
 		//ETAPE3 ajout d'un Neuneu
-		Erratique luc = new Erratique("Luc", loft);
-		loft.naissance(luc);
-		Lapin john = new Lapin("John", loft, 5, 7);
-		loft.naissance(john);
+		Erratique erratiqueLuc = new Erratique("erratiqueLuc", loft);
+		loft.naissance(erratiqueLuc);
+		Lapin lapinJohn = new Lapin("lapinJohn", loft, 5, 7);
+		loft.naissance(lapinJohn);
+		Cannibale cannibaleBob = new Cannibale("cannibaleBob", loft, 4, 1);
+		loft.naissance(cannibaleBob);
+		Vorace voraceJoe = new Vorace("voraceJoe", loft, 8, 9);
+		loft.naissance(voraceJoe);
+		
 		
 		//ETAPE4 affichage du loft
 		loft.afficher();
