@@ -93,6 +93,46 @@ public class Lapin extends Neuneu {
 	  
   }
   
+  /**
+   * Methode manger : si de la nourriture est presente sur la case, il la mange.
+   * Manger une nourriture augmente l'energie du neuneu de l'energie contenue dans la nourriture.
+   * La nourriture est ensuite enlevee de la case
+   */
+  public void manger(){
+/*
+ * On regarde si de la nourriture est presente sur la case sur laquelle le neuneu est situe.
+ * Si une nourriture est presente, on l'enleve de la liste -> la methode etremange n'est pas utile dans ce cas.
+ */
+	  if (this.maison.Plateau[this.positiony][this.positionx].reserve.size()>=1 )
+	  {
+		Nourriture amanger = this.maison.Plateau[this.positiony][this.positionx].reserve.removeFirst();
+		
+		this.energie = this.energie+amanger.energie;
+		
+		System.out.println("Le neuneu "+this.nom+" a mange la nourriture "+amanger.getClass().getName()+" et a gagne de l'energie.");
+		
+	  }
+  }
+
+  /**
+   * Methode sereproduire() : Le neuneu identifie si un autre neuneu est present sur la meme case que lui.
+   * Si oui, il se reproduit avec ce neuneu et cree un neuneu fils.
+   * Le type du neuneu est indifferent pour la reproduction
+   */
+  public void sereproduire(){
+	  for (Neuneu neu : this.maison.Population)
+	  {
+		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu)
+		  {
+			  Neuneu fils = new Lapin(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
+			  this.maison.Population.addLast(fils);
+			  System.out.println("Le neuneu "+this.nom+" et le neuneu "+neu.nom+" se sont reproduits. Il en resulte la naissance du neuneu "+fils.nom+", de type " +fils.getClass().getName());
+			  break;
+		  }
+
+	  }
+  }
+  
   
   
 }
