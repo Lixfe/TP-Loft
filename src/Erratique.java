@@ -90,20 +90,21 @@ public class Erratique extends Neuneu {
    * Si oui, il se reproduit avec ce neuneu et cree un neuneu fils.
    * Le type du neuneu est indifferent pour la reproduction
    */
-  public Neuneu sereproduire(){
+  public LinkedList<Neuneu> sereproduire(){
+	  LinkedList<Neuneu> listeFils = new LinkedList<Neuneu>();
 	  for (Neuneu neu : this.maison.Population)
 	  {
 		  if (neu.positionx == this.positionx && neu.positiony == this.positiony && this != neu)
 		  {
 			  Neuneu fils = new Erratique(this.nom+neu.nom, this.maison, this.positionx, this.positiony);
 			  System.out.println("Le neuneu "+this.nom+" et le neuneu "+neu.nom+" se sont reproduits. Il en resulte la naissance du neuneu "+fils.nom+", de type " +fils.getClass().getName());
-			  return fils;
+			  listeFils.add(fils);
 			  break;
 		  }
 
 	  }
-	  
-	  
+	  return listeFils;
+
   }
   
   public void dormir(){
