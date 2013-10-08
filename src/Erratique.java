@@ -35,8 +35,8 @@ public class Erratique extends Neuneu {
   /**
    * Methode pour le deplacement du neuneu erratique.
    * 
-   * Ce neuneu ne possède pas de stratégie de déplacement, il va de manière aléatoire dans une case adjacente.
-   * (Les déplacements diagonaux sont autorisés)
+   * Ce neuneu ne possede pas de strategie de deplacement, il va de maniere aleatoire dans une case adjacente.
+   * (Les deplacements diagonaux sont autorises)
    */
   public void sedeplacer(){
 	  int a,b;

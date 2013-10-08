@@ -53,9 +53,12 @@ public class TPLoft {
 
 							
 							// tour de jeu d'un neuneu
+							if (joueur.energie>0)
+							{
 							joueur.sedeplacer();
 							joueur.manger();
-							listeNaissance.addAll(joueur.sereproduire()); 
+							listeNaissance.addAll(joueur.sereproduire());
+							}
 						}
 						
 						//On ajoute les neuneus nee pendant le tour sur le plateau
